@@ -4,33 +4,39 @@
     "homepage": "http://bolt.cm",
     "keywords": ["CMS", "Silex", "PHP", "Symfony"],
     "license": "MIT",
+
     "require": {
-        "bolt/krumo": "dev-master",
+        "bolt/dumper": "~0.7",
+        "bolt/thumbs": "1.7.*@dev",
+        "brandonwamboldt/utilphp": "~1.0",
+        "composer/composer": "1.0.*@dev",
         "doctrine/dbal": "~2.4",
-        "erusev/parsedown": "dev-master",
-        "filp/whoops": "1.*",
-        "garetjax/phpbrowscap": "dev-master",
-        "guzzle/guzzle": "3.3.*",
-        "hautelook/phpass": "dev-master",
-        "ircmaxell/random-lib": "1.0.*@dev",
+        "erusev/parsedown-extra": "~0.2",
+        "filp/whoops": "~1.1",
+        "guzzle/guzzle": "~3.9",
+        "hautelook/phpass": "~0.3",
+        "ircmaxell/random-lib": "dev-master",
         "jbroadway/urlify": "1.0.0-stable",
-        "php": ">=5.3.2",
-        "silex/silex": "1.*",
+        "rossriley/flysystem53": "~0.5",
+        "php": ">=5.3.3",
+        "rossriley/upload": "~1.2",
+        "silex/silex": "~1.2",
         "silex/web-profiler": "~1.0",
-        "swiftmailer/swiftmailer": "5.*",
-        "symfony/config": "~2.4",
-        "symfony/console": "~2.4",
-        "symfony/filesystem": "~2.4",
-        "symfony/finder": "~2.4",
-        "symfony/form": "~2.4",
-        "symfony/locale": "~2.4",
-        "symfony/translation": "~2.4",
-        "symfony/twig-bridge": "~2.4",
-        "symfony/validator": "~2.4",
-        "symfony/web-profiler-bundle": "~2.4",
-        "symfony/yaml": "~2.4",
-        "tdammers/htmlmaid": ">=0.5.0",
-        "twig/twig": ">=1.8,<2.0-dev"
+        "swiftmailer/swiftmailer": "~5.0",
+        "symfony/config": "~2.5",
+        "symfony/console": "~2.5",
+        "symfony/filesystem": "~2.5",
+        "symfony/finder": "~2.5",
+        "symfony/form": "~2.5",
+        "symfony/locale": "~2.5",
+        "symfony/translation": "~2.5",
+        "symfony/twig-bridge": "~2.5",
+        "symfony/validator": "~2.5",
+        "symfony/web-profiler-bundle": "~2.5",
+        "symfony/yaml": "~2.5",
+        "tdammers/htmlmaid": "~0.7",
+        "twig/twig": "~1.16",
+        "bolt/pathogen": "~0.6"
     },
     "require-dev": {
         "phpunit/php-code-coverage": "1.2.*@dev",
@@ -38,24 +44,20 @@
         "phpunit/dbunit": "1.2.3",
         "phpmd/phpmd": "1.5.0",
         "sebastian/phpcpd": "1.4.3",
-        "squizlabs/php_codesniffer": "1.4.6",
+        "squizlabs/php_codesniffer": "1.5.*",
+        "m6web/symfony2-coding-standard": "dev-master",
         "codeception/codeception": "*"
     },
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/bolt/krumo"
-        }
-    ],
     "minimum-stability": "beta",
     "config": {
         "preferred-install": "dist"
     },
     "prefer-stable": true,
     "autoload": {
-        "psr-0": {
-            "Bolt": "app/src/",
-            "Bolt\\Tests": "app/tests"
+        "psr-4": {
+            "Bolt\\": "src",
+            "Bolt\\Tests\\": "tests/Bolt/Tests"
         }
-    }
+    },
+    "bin": ["app/nut"]
 }
