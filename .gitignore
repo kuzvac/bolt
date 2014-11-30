@@ -1,29 +1,42 @@
+# Bolt specific stuff. Don't put config files, databases or 'vendor' in Git.
 app/cache/*
 app/config/*.yml
-*config.yml
+app/config/extensions/
 app/database/*
+*config.yml
 files/*
+extensions/*
 thumbs/
 vendor/
+
+# unless you want to store vendor's "state" in your Git repo.
 composer.phar
+composer.lock
+
+# Files related to testing, file-system cruft and temporary files.
+scrutinizer.phar
+php-cs-fixer.phar
 .DS_Store
-._.DS_Store
 .idea
 __*
-.__*
+._*
 web
 Vagrantfile
 .vagrant*
-scrutinizer.phar
-php-cs-fixer.phar
 *.sublime-*
-.*.swp
 /tags
+.*.swp
 .swp
 *.lock
 .gitignore
+test/_log
+test/*/*Guy.php
+.buildpath
+.project
+npm-debug.log
+.sass-cache
+node_modules
+bower_components
+/bolt.log
 
-composer.lock
-tests/_log
-tests/*/*Guy.php
-deploy.php
+*.map
